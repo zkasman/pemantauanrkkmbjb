@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'index' %}">Laman Utama</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Cadangan Projek</li>
+            </ol>
+        </nav>
+        <h1 class="h3 mb-3">Dashboard Projek</h1>
+
+        {% include 'status.html' %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container-fluid" id="mapid" style="height: 43vh;"></div>
+                    </div>
+                </div>
+            </div>
+       
+    </div>
+</main>
+
+
+
+
+{% endblock %}

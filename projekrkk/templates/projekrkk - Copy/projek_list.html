@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<main class="content">
+  <div class="container-fluid p-0">
+    <!-- <a href="{% url 'account_Projek_create' %}" class="btn btn-primary float-end mt-n1"><i class="fas fa-plus"></i> Projek Baru</a> -->
+      <h1 class="h3 mb-3">Senarai Projek</h1>
+      <!-- <h6 class="text-muted">Senarai Agensi Peneraju, Pelaksana & Pengurusan</h6> -->
+
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card card-body">
+                  <table id="datatables-reponsive" class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Nama Projek</th>
+                        <th>Kod Lembangan</th>
+                        <th>Jenis Projek</th>
+                        <th>Kategori Projek</th>
+                        <th>Fasa Laksana</th>
+                        <th>Kos Projek (RM)</th>
+                        <!-- <th>Tindakan</th> -->
+                    </tr>
+                    </thead>
+                    <tbody>
+                      {% for object in object_list %}
+                      <tr>
+                        <td><a href="{{object.get_absolute_url}}">{{object.nama_projek}}</a></td>
+                        <td class="d-none d-md-table-cell">{{object.lembangan.kod_sublembangan}}</td>
+                        <td class="d-none d-md-table-cell">{{object.jenis.nama_jenis}}</td>
+                        <td class="d-none d-md-table-cell">{{object.kategori_projek.nama_kategori}}</td>
+                        <td class="d-none d-md-table-cell">{{object.fasa_laksana.nama_fasa}}</td>
+                        <td class="d-none d-md-table-cell">{{object.kos_projek}}</td>
+                        <!-- <td class="table-action">
+                          <a href="{% url 'account_Projek_update' object.pk %}" class="btn btn-primary text-white">Kemaskini</a>
+                          <a href="{% url 'account_Projek_delete' object.pk %}" class="btn btn-danger text-white">Padam</a>
+                        </td> -->
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+              </div>
+      
+          </div>
+      </div>
+  </div>
+</main>
+
+{% endblock %}

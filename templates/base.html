@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Bootstrap 5 Admin &amp; Dashboard Template">
+	<meta name="author" content="Bootlab">
+
+	<title>Sistem Pemantauan Projek</title>
+
+	<link rel="canonical" href="https://appstack.bootlab.io/pages-blank.html" />
+	<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+	<!-- Choose your prefered color scheme -->
+	<!-- <link href="css/light.css" rel="stylesheet"> -->
+	<!-- <link href="css/dark.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/light.css' %}">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+</head>
+<!--
+  HOW TO USE: 
+  data-theme: default (default), dark, light
+  data-layout: fluid (default), boxed
+  data-sidebar-position: left (default), right
+  data-sidebar-behavior: sticky (default), fixed, compact
+-->
+
+<body data-theme="default" data-layout="fluid" data-sidebar-behavior="sticky">
+	<div class="wrapper">
+		<div class="main">
+
+      {% include 'navbar.html' %}
+
+			{% block content %}
+      {% endblock %}
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<p class="mb-0">
+								Hak Cipta Terpelihara &copy; 2023 - <a href="https://www.mbjb.gov.my/" class="text-muted"> Majlis Bandaraya Johor Bahru</a>
+							</p>
+						</div>
+						<div class="col-6 text-end">
+							<p class="mb-0">
+								Rancangan Kawasan Khas Sungai Tebrau | Versi 1.0-2023
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="{% static '/js/app.js' %}"></script>
+	<script src="{% static '/js/map.js' %}"></script>
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+</body>
+
+</html>

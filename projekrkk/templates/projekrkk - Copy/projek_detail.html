@@ -1,0 +1,98 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<!-- <p>
+    <a class="btn btn-light" href="{% url 'account_Projek_list' %}">
+    Projek Listing
+    </a>
+</p> -->
+
+<!-- <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'account_Projek_list' %}">Senarai Projek</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Butiran Projek</li>
+    </ol>
+  </nav>
+    
+<table class="table">
+    <tr><td>nama_projek</td><td>{{ object.nama_projek }}</td></tr>
+    <tr><td>lembangan</td><td>{{ object.lembangan.kod_sublembangan }}</td></tr>
+    <tr><td>kategori_projek</td><td>{{ object.kategori_projek.nama_kategori }}</td></tr>
+    <tr><td>jenis</td><td>{{ object.jenis.nama_jenis }}</td></tr>
+    <tr><td>klasifikasi</td><td>{{ object.klasifikasi.nama_klasifikasi }}</td></tr>
+    <tr><td>kos_projek</td><td>{{ object.kos_projek }}</td></tr>
+    <tr><td>sumber_kos</td><td>{{ object.sumber_kos.nama_sumber }}</td></tr>
+    <tr><td>fasa_laksana</td><td>{{ object.fasa_laksana.nama_fasa }}</td></tr>
+    <tr><td>kaedah_laksana</td><td>{{ object.kaedah_laksana.nama_kaedah }}</td></tr>
+    <tr><td>keperluan_pembangunan</td><td>{{ object.keperluan_pembangunan.nama_keperluan }}</td></tr>
+    <tr><td>catatan</td><td>{{ object.catatan }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a> -->
+
+<main class="content">
+    <div class="container-fluid p-0">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'account_Projek_list' %}">Senarai Projek</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Butiran Projek</li>
+            </ol>
+          </nav>
+      <!-- <a href="{% url 'account_Projek_create' %}" class="btn btn-primary float-end mt-n1"><i class="fas fa-plus"></i> Projek Baru</a> -->
+        <!-- <h1 class="h3 mb-3">Senarai Projek</h1> -->
+        <!-- <h6 class="text-muted">Senarai Agensi Peneraju, Pelaksana & Pengurusan</h6> -->
+  
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body">
+                    <table class="table table-striped">
+                      <!-- <thead>
+                        <tr>
+                          <th>Nama Projek</th>
+                          <th>Kod Lembangan</th>
+                          <th>Kategori Projek</th>
+                          <th>Fasa Laksana</th>
+                          <th>Kos Projek (RM)</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        {% for object in object_list %}
+                        <tr>
+                          <td><a href="{{object.get_absolute_url}}">{{object.nama_projek}}</a></td>
+                          <td>{{object.lembangan.kod_sublembangan}}</td>
+                          <td class="d-none d-md-table-cell">{{object.kategori_projek.nama_kategori}}</td>
+                          <td class="d-none d-md-table-cell">{{object.fasa_laksana.nama_fasa}}</td>
+                          <td class="d-none d-md-table-cell">{{object.kos_projek}}</td>
+                        </tr>
+                        {% endfor %}
+                      </tbody> -->
+                        <tr><td><b>Nama Projek<b></td><td>{{ object.nama_projek }}</td></tr>
+                        <tr><td><b>Lembangan</b></td><td>{{ object.lembangan.kod_sublembangan }}</td></tr>
+                        <tr><td><b>Fokus Cadangan</b></td><td>{{ object.klasifikasi.nama_klasifikasi }}</td></tr>
+                        <tr><td><b>Kategori Projek</b></td><td>{{ object.kategori_projek.nama_kategori }}</td></tr>
+                        <tr><td><b>Jenis</b></td><td>{{ object.jenis.nama_jenis }}</td></tr>
+                        <tr><td><b>Kos Projek</b></td><td>{{ object.kos_projek }}</td></tr>
+                        <tr><td><b>Sumber Kos</b></td><td>{{ object.sumber_kos.nama_sumber }}</td></tr>
+                        <tr><td><b>Fasa Laksana</b></td><td>{{ object.fasa_laksana.nama_fasa }}</td></tr>
+                        <tr><td><b>Kaedah Laksana</b></td><td>{{ object.kaedah_laksana.nama_kaedah }}</td></tr>
+                        <tr><td><b>Keperluan Pembangunan</b></td><td>{{ object.keperluan_pembangunan.nama_keperluan }}</td></tr>
+                        <tr><td><b>Catatan</b></td><td>{{ object.catatan }}</td></tr>
+                    </table>
+                </div>
+        
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Lokasi</h5>
+                    <div class="content" id="mapid" style="height: 62vh;"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+  
+
+{% endblock %}

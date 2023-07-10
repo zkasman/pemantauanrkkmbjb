@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'projekrkk_Agensi_list' %}">
+    Agensi Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>nama_agensi</td><td>{{ object.nama_agensi }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>no_tel</td><td>{{ object.no_tel }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>nama_pegawai</td><td>{{ object.nama_pegawai }}</td></tr>
+    <tr><td>emel</td><td>{{ object.emel }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

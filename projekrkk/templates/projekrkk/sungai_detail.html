@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'projekrkk_Sungai_list' %}">
+    Sungai Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>kategori_sungai</td><td>{{ object.kategori_sungai }}</td></tr>
+    <tr><td>nama_sungai</td><td>{{ object.nama_sungai }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>kod_lembangan</td><td>{{ object.kod_lembangan }}</td></tr>
+    <tr><td>panjang_km</td><td>{{ object.panjang_km }}</td></tr>
+    <tr><td>polygon_geom</td><td>{{ object.polygon_geom }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

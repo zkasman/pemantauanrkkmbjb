@@ -1,0 +1,71 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img src="{% static 'img/logo-mbjb-60.png' %}" alt="">
+      <a class="navbar-brand" href="{% url 'index' %}">Sistem Pengurusan & Pemantauan RKK Sungai Tebrau</a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Dashboard</a>
+          </li> -->
+          <li class="nav-item px-2 dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profil Ringkas Kajian</a>
+            <div class="dropdown-menu dropdown-menu-start dropdown-mega" aria-labelledby="servicesDropdown">
+                <div class="d-md-flex align-items-start justify-content-start">
+                    <div class="dropdown-mega-list">
+                        <div class="dropdown-header">Profil Kawasan RKK</div>
+                        <a class="dropdown-item" href="{% url 'index' %}">Kawasan Kajian Rancangan Kawasan Khas (RKK)</a>
+                        <a class="dropdown-item" href="{% url 'lembangan' %}">Lembangan Sungai Tebrau-Plentong</a>
+                        <a class="dropdown-item" href="{% url 'sublembangan' %}">Sub Lembangan Sungai Tebrau-Plentong</a>
+                        <a class="dropdown-item" href="{% url 'sungai' %}">Sungai dan Parit Utama</a>
+                        <a class="dropdown-item" href="{% url 'gunatanahsemasa' %}">Gunatanah Semasa</a>
+                        <hr>
+                        <div class="dropdown-header">Asas Pembentukan Konsep Pembangunan</div>
+                        <a class="dropdown-item" href="{% url 'rumusangunatanah' %}">Kawasan Tahap Kawalan Aktiviti Gunatanah</a>
+                        <a class="dropdown-item" href="{% url 'isumasalah' %}">Kawasan Isu dan Masalah Utama</a>
+                        <a class="dropdown-item" href="{% url 'potensiprospek' %}">Kawasan Potensi dan Prospek Utama</a>
+                        <a class="dropdown-item" href="{% url 'zontindakan' %}">Zon Tindakan</a>
+                    </div> 
+                </div>
+            </div>
+          </li>
+          <li class="nav-item px-2 dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Laporan Kajian</a>
+            <div class="dropdown-menu dropdown-menu-start dropdown-mega" aria-labelledby="servicesDropdown">
+                <div class="d-md-flex align-items-start justify-content-start">
+                    <div class="dropdown-mega-list">
+                        <!-- <div class="dropdown-header">Butiraan Projek</div> -->
+                        <a class="dropdown-item" href="{% static 'img/toc.pdf' %}" target="_blank">Senarai Kandungan</a>
+                        <a class="dropdown-item" href="{% static 'img/bab1.pdf' %}" target="_blank">Bab 1 - Pengenalan</a>
+                        <a class="dropdown-item" href="{% static 'img/bab2.pdf' %}" target="_blank">Bab 2 - Prospek dan Cabaran</a>
+                        <a class="dropdown-item" href="{% static 'img/bab3.pdf' %}" target="_blank">Bab 3 - Konsep Pembangunan</a>
+                        <a class="dropdown-item" href="{% static 'img/bab4.pdf' %}" target="_blank">Bab 4 - Cadangan Pelan Tindakan Pembangunan</a>
+                        <a class="dropdown-item" href="{% static 'img/bab5.pdf' %}" target="_blank">Bab 5 - Pelan Pengurusan dan Perlaksanaan</a>
+                    </div> 
+                </div>
+            </div>
+          </li>
+          <li class="nav-item px-2 dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadangan Projek</a>
+            <div class="dropdown-menu dropdown-menu-start dropdown-mega" aria-labelledby="servicesDropdown">
+                <div class="d-md-flex align-items-start justify-content-start">
+                    <div class="dropdown-mega-list">
+                        <!-- <div class="dropdown-header">Butiraan Projek</div> -->
+                        <a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard Projek</a>
+                        <a class="dropdown-item" href="{% url 'projekrkk_Projek_list' %}">Senarai Cadangan Projek</a>
+                    </div> 
+                </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+
+      
+</nav>

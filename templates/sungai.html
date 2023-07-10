@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'index' %}">Laman Utama</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Profil Kawasan RKK</li>
+        </ol>
+    </nav>
+        <h1 class="h3 mb-3">Sungai dan Parit Utama</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                    </div>
+                    <div class="card-body">
+                        <table id="datatables-reponsive" class="table table-striped table-sm">
+                            <thead>
+                              <tr>
+                                <th>Sungai Utama</th>
+                                <th>Panjang (km)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Sungai Tebrau</td>
+                                <td class="d-none d-md-table-cell">-</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Sungai Plentong</td>
+                                <td class="d-none d-md-table-cell">18.6</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Sungai Bala</td>
+                                <td class="d-none d-md-table-cell">5.1</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Sungai Pandan</td>
+                                <td class="d-none d-md-table-cell">5.9</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Sungai Sebulong</td>
+                                <td class="d-none d-md-table-cell">4.6</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Sungai Tampoi</td>
+                                <td class="d-none d-md-table-cell">6.8</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Anak Sungai Tampoi</td>
+                                <td class="d-none d-md-table-cell">2.4</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Sungai Plentong I & II</td>
+                                <td class="d-none d-md-table-cell">22.0</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Sungai Sengkuang</td>
+                                <td class="d-none d-md-table-cell">3.9</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Sungai Seranggong</td>
+                                <td class="d-none d-md-table-cell">2.1</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="card-body">
+                      <table id="datatables-reponsive" class="table table-striped table-sm">
+                          <thead>
+                            <tr>
+                              <th>Parit Utama</th>
+                              <th>Panjang (km)</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="d-none d-md-table-cell">Parit Utama Kempas Indah</td>
+                              <td class="d-none d-md-table-cell">-</td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">Parit Utama Data Onn</td>
+                              <td class="d-none d-md-table-cell">-</td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">Parit Utama Taman Adda</td>
+                              <td class="d-none d-md-table-cell">-</td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">Parit Utama Kempas Permatang</td>
+                              <td class="d-none d-md-table-cell">-</td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">Parit Utama Taman Daya II</td>
+                              <td class="d-none d-md-table-cell">-</td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">Parit Utama Taman Perindustrian Tebrau</td>
+                              <td class="d-none d-md-table-cell">-</td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">Parit Utama Ladang Yok</td>
+                              <td class="d-none d-md-table-cell">-</td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">Parit Utama Saujana</td>
+                              <td class="d-none d-md-table-cell">-</td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">Parit Utama Taman Permas Jaya</td>
+                              <td class="d-none d-md-table-cell">-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container" id="mapid" style="height: 62vh; width: 76vh;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+</main>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'index' %}">Laman Utama</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Profil Kawasan RKK</li>
+        </ol>
+    </nav>
+        <h1 class="h3 mb-3">Lembangan Sungai Tebrau-Plentong</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p>Lembangan Sungai Tebrau-Plentong terletak di dalam kawasan pentadbiran MBJB (di bahagian utara), Majlis Bandaraya Johor Bahru dengan keluasan 18,861.34 hektar
+                          bersamaan dengan 50.54% dari keluasan kawasan pentadbiran Majlis Bandaraya Johor Bahru iaitu sepanjang 52.8 km.</p>
+                        <p> Keluasan kawasan tadahan Sungai Tebrau adalah 212.71 hektar.
+                          Anak sungai utama iaitu Sungai Plentong, Sungai Tebrau, Sungai Tampoi, Sungai Sebulong, Sungai Pandan, Sungai Bala, Sungai Seranggong dan Sungai Sengkuang adalah termasuk dalam 
+                          55 sublembangan Sungai Tebrau-Plentong.</p>
+                    </div>
+                    <div class="card-body">
+                        <table id="datatables-reponsive" class="table table-striped table-sm">
+                            <thead>
+                              <tr>
+                                <th>Lembangan Utama</th>
+                                <th>Luas (Hektar)</th>
+                                <th>Peratus</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Tebrau Right (TR)</td>
+                                <td class="d-none d-md-table-cell">5,088.16</td>
+                                <td class="d-none d-md-table-cell">26.98</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Tebrau Left (TL)</td>
+                                <td class="d-none d-md-table-cell">7,466.83</td>
+                                <td class="d-none d-md-table-cell">39.58</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell"><b>Jumlah Lembangan Sungai Tebrau</b></td>
+                                <td class="d-none d-md-table-cell"><b>12,555.99</b></td>
+                                <td class="d-none d-md-table-cell"><b>66.56</b></td>
+                              </tr>
+                              <tr><td colspan="3">&nbsp;</td></tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Plentong Right (PR)</td>
+                                <td class="d-none d-md-table-cell">3,578.01</td>
+                                <td class="d-none d-md-table-cell">18.97</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Plentong Left (PL)</td>
+                                <td class="d-none d-md-table-cell">2,481.58</td>
+                                <td class="d-none d-md-table-cell">13.16</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell"><b>Jumlah Lembangan Sungai Plentong</b></td>
+                                <td class="d-none d-md-table-cell"><b>6,059.61</b></td>
+                                <td class="d-none d-md-table-cell"><b>32.13</b></td>
+                              </tr>
+                              <tr><td colspan="3">&nbsp;</td></tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Sungai Tebrau (Air)</td>
+                                <td class="d-none d-md-table-cell">246.74</td>
+                                <td class="d-none d-md-table-cell">1.31</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell"><b>Jumlah Kawasan RKK</b></td>
+                                <td class="d-none d-md-table-cell"><b>18,861.34</b></td>
+                                <td class="d-none d-md-table-cell"><b>100.00</b></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container" id="mapid" style="height: 62vh; width: 76vh;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+</main>
+
+
+
+
+{% endblock %}

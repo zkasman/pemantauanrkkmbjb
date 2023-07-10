@@ -1,0 +1,68 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'projekrkk_Projek_list' %}">
+    Projek Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>Kod Projek:</td><td>{{ object.kod_projek }}</td></tr>
+    <tr><td>Nama Projek:</td><td>{{ object.nama_projek }}</td></tr>
+    <tr><td>Sub Lembangan:</td><td>
+        {% for sublembangan in projek.sublembangan.all %}
+        <p>{{ sublembangan.kod_sublembangan }}</p>
+        {% empty %}
+        <p>Tiada tetapan sub lembangan</p>
+        {% endfor %}
+    </td></tr>
+    <tr><td>Fokus:</td><td>{{ object.fokus }}</td></tr>
+    <tr><td>Jenis:</td><td>{{ object.jenis }}</td></tr>
+    <tr><td>Kategori:</td><td>{{ object.kategori }}</td></tr>
+    <tr><td>Fasa:</td><td>
+        {% for fasa in projek.fasa.all %}
+        <p>{{ fasa.nama_fasa }}</p>
+        {% empty %}
+        <p>Tiada tetapan fasa pelaksanaan</p>
+        {% endfor %}
+    </td></tr>
+    <tr><td>Status:</td><td>{{ object.status }}</td></tr>
+    <tr><td>Agensi Pemula:</td><td>
+        {% for agensi in projek.agensi_pemula.all %}
+        <p>{{ agensi.nama_agensi }}</p>
+        {% empty %}
+        <p>Tiada tetapan agensi</p>
+        {% endfor %}
+    </td></tr>
+    <tr><td>Agensi Pembiaya:</td><td>
+        {% for agensi in projek.agensi_pembiaya.all %}
+        <p>{{ agensi.nama_agensi }}</p>
+        {% empty %}
+        <p>Tiada tetapan agensi</p>
+        {% endfor %}
+    </td></tr>
+    <tr><td>Agensi Pelaksana:</td><td>
+        {% for agensi in projek.agensi_pelaksana.all %}
+        <p>{{ agensi.nama_agensi }}</p>
+        {% empty %}
+        <p>Tiada tetapan agensi</p>
+        {% endfor %}
+    </td></tr>
+    <tr><td>Kos Pelaksanaan:</td><td>{{ object.kos_pelaksanaan }}</td></tr>
+    <tr><td>Sasaran Pencapaian:</td><td><p style="white-space:pre-line;">{{ object.sasaran_pencapaian }}</p></td></tr>
+    <tr><td>Deskripsi Cadangan:</td><td><p style="white-space:pre-line;">{{ object.deskripsi_cadangan }}</p></td></tr>
+    <tr><td>Justifikasi Cadangan</td><td><p style="white-space:pre-line;">{{ object.justifikasi_cadangan }}</p></td></tr>
+    <tr><td>Mukasurat Dalam Laporan:</td><td>{{ object.mukasurat_laporan }}</td></tr>
+    <tr><td>Imej:</td><td>{{ object.imej }}</td></tr>
+    <tr><td>polygon_geom</td><td>{{ object.polygon_geom }}</td></tr>
+    <tr><td>Catatan:</td><td><p style="white-space:pre;">{{ object.catatan }}</p></td></tr>
+    <!-- <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>aktif</td><td>{{ object.aktif }}</td></tr> -->
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

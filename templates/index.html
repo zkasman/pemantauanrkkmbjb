@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'index' %}">Laman Utama</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Profil Kawasan RKK</li>
+            </ol>
+        </nav>
+        <h1 class="h3 mb-3">Profil Kawasan Kajian Rancangan Kawasan Khas (RKK)</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Latarbelakang</h3>
+                        <p>Sungai Tebrau merupakan salah satu sungai utama Negeri Johor. Sungai ini mengalir dari Bahagian Utara iaitu kawasan Senai ke Selat Johor yang berhampiran dengan Pusat Bandaraya Johor Bahru. Lembangan Sungai Tebrau-Plentong ini seluas 18,861.34 hektar/ 188.61km². Kawasan ini meliputi kawasan pentadbiran 
+                            Daerah Johor Bahru yang melibatkan Majlis Bandaraya Johor Bahru (MBJB).</p>
+                        <p>Kawasan kajian RKK Sungai Tebrau terletak di dalam Mukim Tebrau, Daerah Johor Bahru. Kawasan kajian ini merangkumi anak-anak sungai iaitu Sungai Bala, Sungai Pandan, Sungai Plentong, Sungai Sebulong, Sungai Sengkuang, Sungai Tampoi 
+                            dan Sungai Tebrau.</p>
+                            <br>
+                        <h3>Matlamat Kajian</h3>
+                        <p><b>MENYEDIAKAN PELAN TINDAKAN PELAKSANAAN BAGI TUJUAN PEMULIHARAAN DAN PEMELIHARAAN KUALITI ALAM SEKITAR TERUTAMA KUALITI AIR SUNGAI TEBRAU</b></p>
+                        <br>
+                        <h3>Objektif Kajian</h3>
+                        <p>i. Pemuliharaan dan pemeliharaan kualiti alam sekitar lembangan sungai tebrau</p>
+                        <p>ii. Meningkatkan potensi koridor sungai sebagai rangkaian hijau bagi tujuan rekreasi, pelancongan dan biodiversiti</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container" id="mapid" style="height: 62vh; width: 76vh;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+{% endblock %}

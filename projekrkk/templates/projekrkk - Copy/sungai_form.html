@@ -1,0 +1,60 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'projekrkk_Sungai_list' %}">
+    Sungai Listing
+    </a>
+</p>
+    
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.errors}}
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="kategori_sungai">kategori_sungai: </label>
+      <input class="form-control col-sm-10"
+         id="kategori_sungai" type="text"
+         name="kategori_sungai" value="{{ object.kategori_sungai }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="nama_sungai">nama_sungai: </label>
+      <input class="form-control col-sm-10"
+         id="nama_sungai" type="text"
+         name="nama_sungai" value="{{ object.nama_sungai }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="created">created: </label>
+      <input class="form-control col-sm-10"
+         id="created" type="datetime-local"
+         name="created" value="{{ object.created }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="kod_lembangan">kod_lembangan: </label>
+      <input class="form-control col-sm-10"
+         id="kod_lembangan" type="text"
+         name="kod_lembangan" value="{{ object.kod_lembangan }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="panjang_km">panjang_km: </label>
+      <input class="form-control col-sm-10"
+         id="panjang_km" type="text"
+         name="panjang_km" value="{{ object.panjang_km }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="polygon_geom">polygon_geom: </label>
+      <input class="form-control col-sm-10"
+         id="polygon_geom" type="text"
+         name="polygon_geom" value="{{ object.polygon_geom }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="last_updated">last_updated: </label>
+      <input class="form-control col-sm-10"
+         id="last_updated" type="datetime-local"
+         name="last_updated" value="{{ object.last_updated }}" disabled>
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'projekrkk_Gunatanahsemasa_list' %}">
+    Gunatanahsemasa Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>kod_gtn</td><td>{{ object.kod_gtn }}</td></tr>
+    <tr><td>no_lot</td><td>{{ object.no_lot }}</td></tr>
+    <tr><td>mukim_id</td><td>{{ object.mukim_id }}</td></tr>
+    <tr><td>upi</td><td>{{ object.upi }}</td></tr>
+    <tr><td>gtn2</td><td>{{ object.gtn2 }}</td></tr>
+    <tr><td>luas_hektar</td><td>{{ object.luas_hektar }}</td></tr>
+    <tr><td>pbt_id</td><td>{{ object.pbt_id }}</td></tr>
+    <tr><td>gtn1</td><td>{{ object.gtn1 }}</td></tr>
+    <tr><td>teks</td><td>{{ object.teks }}</td></tr>
+    <tr><td>nama</td><td>{{ object.nama }}</td></tr>
+    <tr><td>status</td><td>{{ object.status }}</td></tr>
+    <tr><td>negeri_id</td><td>{{ object.negeri_id }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>seksyen_id</td><td>{{ object.seksyen_id }}</td></tr>
+    <tr><td>daerah_id</td><td>{{ object.daerah_id }}</td></tr>
+    <tr><td>tahun_data</td><td>{{ object.tahun_data }}</td></tr>
+    <tr><td>fcode</td><td>{{ object.fcode }}</td></tr>
+    <tr><td>polygon_geom</td><td>{{ object.polygon_geom }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

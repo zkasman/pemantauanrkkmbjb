@@ -1,0 +1,369 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<main class="content">
+    <div class="container-fluid p-0">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Laman Utama</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Asas Pembentukan Konsep & Strategi Pembangunan</li>
+        </ol>
+      </nav>
+        <h1 class="h3 mb-3">Rumusan Kawalan Aktiviti Gunatanah</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container" id="mapid" style="height: 62vh; width: 76vh;"></div>
+                </div>
+            </div>
+           </div>
+           <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Tahap Kawalan Aktiviti Guna Tanah Semasa</h5>
+                </div>
+                <div class="card-body">
+                    <table id="datatables-reponsive" class="table table-striped table-sm">
+                        <thead>
+                          <tr>
+                            <th>Tahap Kawalan</th>
+                            <th>Definisi</th>
+                            <th>Jumlah Sub Lembangan</th>
+                            <th>Peratus</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="d-none d-md-table-cell">Sangat Terkawal</td>
+                            <td class="d-none d-md-table-cell">Kawasan tepu bina yang dibangunkan sepenuhnya dengan pembangunan terancang</td>
+                            <td class="d-none d-md-table-cell">15</td>
+                            <td class="d-none d-md-table-cell">27.27</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">Terkawal</td>
+                            <td class="d-none d-md-table-cell">Kawasan tepu bina yang sepenuhnya dibangunkan dengan aktiviti terancang dan terdapat aktiviti bukan tepu bina (pertanian dan hutan)</td>
+                            <td class="d-none d-md-table-cell">9</td>
+                            <td class="d-none d-md-table-cell">16.36</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">Kawalan Sederhana</td>
+                            <td class="d-none d-md-table-cell">≥ 90% kawasan tepu bina terdiri daripada aktiviti pembangunan terancang dan ≤ 10% tidak terancang</td>
+                            <td class="d-none d-md-table-cell">19</td>
+                            <td class="d-none d-md-table-cell">34.55</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">Kawalan Rendah</td>
+                            <td class="d-none d-md-table-cell">≥ 80% kawasan tepu bina terdiri daripada aktiviti pembangunan terancang dan ≤ 20% tidak terancang</td>
+                            <td class="d-none d-md-table-cell">7</td>
+                            <td class="d-none d-md-table-cell">12.73</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">Kawalan Sangat Rendah</td>
+                            <td class="d-none d-md-table-cell">≥ 70% kawasan tepu bina terdiri daripada aktiviti pembangunan terancang dan ≤ 30% tidak terancang</td>
+                            <td class="d-none d-md-table-cell">4</td>
+                            <td class="d-none d-md-table-cell">7.27</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">Kawalan Terhad</td>
+                            <td class="d-none d-md-table-cell">≥ 60% kawasan tepu bina terdiri daripada aktiviti pembangunan terancang dan ≤ 40% tidak terancang</td>
+                            <td class="d-none d-md-table-cell">1</td>
+                            <td class="d-none d-md-table-cell">1.82</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+          <!-- <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sub Lembangan Sungai Tebrau</h5>
+                    <table id="datatables-reponsive" class="table table-striped table-sm">
+                        <thead>
+                          <tr>
+                            <th>(Tebrau Right)</th>
+                            <th>Tahap Kawalan Pembangunan</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR1 - Sungai Seranggong</td>
+                            <td class="d-none d-md-table-cell">Sangat Terkawal</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR2 - Sungai Sengkuang</td>
+                            <td class="d-none d-md-table-cell">Kawalan Sederhana</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR2.1 - Parit Utama Kg. Bakar Batu</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR3 - Anak Sg. Tampoi</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR4A - Sg. Tampoi</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR4b - Sg. Tampoi</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR5A - Sg. Sebulong</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR5B - Sg. Sebulong</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR6 - Anak Sg. Sebulong</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR7A - Sg. Bala</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR7B - Sg. Bala</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR8 - Parit Utama Perindustrian Tebrau</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR9 - Parit Utama Perindustrian Tebrau</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR10 - Parit Utama Paya Kenangan</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR11A - Parit Utama Kempas Permatang</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR11B - Parit Utama Kempas Permatang</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR12 - Parit Utama Desa Palma</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR13 - Parit Utama Nasa City</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR14 - Parit Utama Setia Tropika</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR15A - Parit Utama Kempas Indah</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR15B - Parit Utama Kempas Indah</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">TR16 - Parit Utama Kg. Maju Jaya</td>
+                            <td class="d-none d-md-table-cell"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="card-body">
+                    <table id="datatables-reponsive" class="table table-striped table-sm">
+                      <thead>
+                        <tr>
+                          <th>(Tebrau Left)</th>
+                          <th>Tahap Kawalan Pembangunan</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL1 - Parit Utama Ladang York</td>
+                          <td class="d-none d-md-table-cell"></td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL2 - Parit Utama Panderosa I</td>
+                          <td class="d-none d-md-table-cell"></td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL3 - Parit Utama Panderosa II</td>
+                          <td class="d-none d-md-table-cell"></td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL4 - Parit Utama Kg. Pandan</td>
+                          <td class="d-none d-md-table-cell table-danger">Kawalan Terhad</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL5A - Sg. Pandan</td>
+                          <td class="d-none d-md-table-cell">Kawalan Sederhana</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL5B - Sg. Pandan</td>
+                          <td class="d-none d-md-table-cell">Sangat Terkawal</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL6 - Parit Utama Kg. Bunga Ros I</td>
+                          <td class="d-none d-md-table-cell">Kawalan Sederhana</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL7 - Parit Utama Kg. Bunga Ros II</td>
+                          <td class="d-none d-md-table-cell">Kawalan Sangat Rendah</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL8 - Parit Utama Taman Daya I</td>
+                          <td class="d-none d-md-table-cell">Sangat Terkawal</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL9 - Parit Utama Taman Daya</td>
+                          <td class="d-none d-md-table-cell">Kawalan Sederhana</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL10 - Parit Utama Taman Adda</td>
+                          <td class="d-none d-md-table-cell">Kawalan Rendah</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL11 - Parit Utama Taman Dato Onn I</td>
+                          <td class="d-none d-md-table-cell">Sangat Terkawal</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL12A - Parit Utama Taman Dato Onn II</td>
+                          <td class="d-none d-md-table-cell">Kawalan Sederhana</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL12B - Parit Utama Taman Dato Onn II</td>
+                          <td class="d-none d-md-table-cell">Terkawal</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL12C - Parit Utama Taman Dato Onn II</td>
+                          <td class="d-none d-md-table-cell">Terkawal</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL13 - Parit Utama Kg. Maju Jaya</td>
+                          <td class="d-none d-md-table-cell">Kawalan Sangat Rendah</td>
+                        </tr>
+                        <tr>
+                          <td class="d-none d-md-table-cell">TL15 - Parit Utama Kg. Seelong Jaya</td>
+                          <td class="d-none d-md-table-cell">Terkawal</td>
+                        </tr>
+                      </tbody>
+                      </table>
+                </div>
+            </div>
+                
+          </div> -->
+          <!-- <div class="col-md-6">
+              <div class="card">
+                  <div class="card-body">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Sub Lembangan Sungai Plentong</h5>
+                      <table id="datatables-reponsive" class="table table-striped table-sm">
+                          <thead>
+                            <tr>
+                              <th>(Plentong Right)</th>
+                              <th>Tahap Kawalan Pembangunan</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="d-none d-md-table-cell">PR1 - Parit Utama Desa Harmoni</td>
+                              <td class="d-none d-md-table-cell"></td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">PR2A - Parit Utama Saujana (Ros Merah)</td>
+                              <td class="d-none d-md-table-cell"></td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">PR2B - Parit Utama Saujana (Ros Merah)</td>
+                              <td class="d-none d-md-table-cell"></td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">PR2C - Parit Utama Saujana (Ros Merah)</td>
+                              <td class="d-none d-md-table-cell"></td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">PR3 - Parit Utama Johor Jaya</td>
+                              <td class="d-none d-md-table-cell"></td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">PR4A - Sg. Plentong I</td>
+                              <td class="d-none d-md-table-cell"></td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">PR4B - Sg. Plentong I</td>
+                              <td class="d-none d-md-table-cell"></td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">PR4C - Sg. Plentong I</td>
+                              <td class="d-none d-md-table-cell"></td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">PR5 - Parit Utama Kg. Sri Makmur</td>
+                              <td class="d-none d-md-table-cell"></td>
+                            </tr>
+                            <tr>
+                              <td class="d-none d-md-table-cell">PR6 - Sg. Plentong II</td>
+                              <td class="d-none d-md-table-cell"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                  </div>
+                  <div class="card-body">
+                      <table id="datatables-reponsive" class="table table-striped table-sm">
+                        <thead>
+                          <tr>
+                            <th>(Plentong Left)</th>
+                            <th>Tahap Kawalan Pembangunan</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="d-none d-md-table-cell">PL1 - Sg. Plentong III</td>
+                            <td class="d-none d-md-table-cell">Terkawal</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">PL2 - Parit Utama Taman Permas Jaya</td>
+                            <td class="d-none d-md-table-cell">Terkawal</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">PL3 - Parit Utama Taman Plentong Baru</td>
+                            <td class="d-none d-md-table-cell">Sangat Terkawal</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">PL4 - Parit Utama Kg. Baru Cina</td>
+                            <td class="d-none d-md-table-cell">Sangat Terkawal</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">PL5 - Parit Utama Kg. Baru Cina</td>
+                            <td class="d-none d-md-table-cell">Sangat Terkawal</td>
+                          </tr>
+                          <tr>
+                            <td class="d-none d-md-table-cell">PL6 - Sg. Plentong I</td>
+                            <td class="d-none d-md-table-cell">Kawalan Sangat Rendah</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                  </div>
+              </div>
+                  
+          </div>  -->
+        </div>
+    </div>
+</main>
+
+
+
+{% endblock %}

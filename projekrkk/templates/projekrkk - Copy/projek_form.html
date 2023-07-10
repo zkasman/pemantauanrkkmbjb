@@ -1,0 +1,132 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'projekrkk_Projek_list' %}">
+    Projek Listing
+    </a>
+</p>
+    
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.errors}}
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="nama_projek">nama_projek: </label>
+      <input class="form-control col-sm-10"
+         id="nama_projek" type="text"
+         name="nama_projek" value="{{ object.nama_projek }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="mukasurat_laporan">mukasurat_laporan: </label>
+      <input class="form-control col-sm-10"
+         id="mukasurat_laporan" type="text"
+         name="mukasurat_laporan" value="{{ object.mukasurat_laporan }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="aktif">aktif: </label>
+      <input class="form-control col-sm-10"
+         id="aktif" type="text"
+         name="aktif" value="{{ object.aktif }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="imej">imej: </label>
+      <input class="form-control col-sm-10"
+         id="imej" type="file"
+         name="imej" value="{{ object.imej }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="deskripsi_cadangan">deskripsi_cadangan: </label>
+      <input class="form-control col-sm-10"
+         id="deskripsi_cadangan" type="text"
+         name="deskripsi_cadangan" value="{{ object.deskripsi_cadangan }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="kod_projek">kod_projek: </label>
+      <input class="form-control col-sm-10"
+         id="kod_projek" type="text"
+         name="kod_projek" value="{{ object.kod_projek }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="justifikasi_cadangan">justifikasi_cadangan: </label>
+      <input class="form-control col-sm-10"
+         id="justifikasi_cadangan" type="text"
+         name="justifikasi_cadangan" value="{{ object.justifikasi_cadangan }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="kos_pelaksanaan">kos_pelaksanaan: </label>
+      <input class="form-control col-sm-10"
+         id="kos_pelaksanaan" type="number"
+         name="kos_pelaksanaan" value="{{ object.kos_pelaksanaan }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="catatan">catatan: </label>
+      <input class="form-control col-sm-10"
+         id="catatan" type="text"
+         name="catatan" value="{{ object.catatan }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="sasaran_pencapaian">sasaran_pencapaian: </label>
+      <input class="form-control col-sm-10"
+         id="sasaran_pencapaian" type="text"
+         name="sasaran_pencapaian" value="{{ object.sasaran_pencapaian }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="created">created: </label>
+      <input class="form-control col-sm-10"
+         id="created" type="datetime-local"
+         name="created" value="{{ object.created }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="polygon_geom">polygon_geom: </label>
+      <input class="form-control col-sm-10"
+         id="polygon_geom" type="text"
+         name="polygon_geom" value="{{ object.polygon_geom }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="last_updated">last_updated: </label>
+      <input class="form-control col-sm-10"
+         id="last_updated" type="datetime-local"
+         name="last_updated" value="{{ object.last_updated }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="status">status: </label>
+      {{ form.status }}
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="sublembangan">sublembangan: </label>
+      {{ form.sublembangan }}
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="fokus">fokus: </label>
+      {{ form.fokus }}
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="agensi_pembiaya">agensi_pembiaya: </label>
+      {{ form.agensi_pembiaya }}
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="agensi_pelaksana">agensi_pelaksana: </label>
+      {{ form.agensi_pelaksana }}
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="jenis">jenis: </label>
+      {{ form.jenis }}
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="fasa">fasa: </label>
+      {{ form.fasa }}
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="kategori">kategori: </label>
+      {{ form.kategori }}
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="agensi_pemula">agensi_pemula: </label>
+      {{ form.agensi_pemula }}
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}

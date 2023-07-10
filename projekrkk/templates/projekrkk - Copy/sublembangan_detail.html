@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'projekrkk_Sublembangan_list' %}">
+    Sublembangan Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>rumusan_kawalan_gunatanah</td><td>{{ object.rumusan_kawalan_gunatanah }}</td></tr>
+    <tr><td>luas_hektar</td><td>{{ object.luas_hektar }}</td></tr>
+    <tr><td>polygon_geom</td><td>{{ object.polygon_geom }}</td></tr>
+    <tr><td>rumusan_kualiti_air</td><td>{{ object.rumusan_kualiti_air }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>nama_sublembangan</td><td>{{ object.nama_sublembangan }}</td></tr>
+    <tr><td>kod_sublembangan</td><td>{{ object.kod_sublembangan }}</td></tr>
+    <tr><td>zon_tindakan</td><td>{{ object.zon_tindakan }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'index' %}">Laman Utama</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Profil Kawasan RKK</li>
+        </ol>
+    </nav>
+        <h1 class="h3 mb-3">Gunatanah Semasa</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p>Guna tanah tepu bina utama kawasan RKK adalah merupakan guna tanah pengangkutan seluas 3,771.63 hektar (20.00%) diikuti dengan guna tanah perumahan seluas 3,225.14 hektar (17.10%)</p>
+                        <p>Manakala, bagi guna tanah bukan tepubina, guna tanah tanah kosong merupakan guna tanah yang dominan dengan keluasan seluas 4,800.09 hektar (25.45%) yang kemudiannya diikuti guna tanah pertanian seluas 2,060. 33 hektar (10.92%)</p>
+                    </div>
+                    <div class="card-body">
+                        <table id="datatables-reponsive" class="table table-striped table-sm">
+                            <thead>
+                              <tr>
+                                <th>Gunatanah Utama</th>
+                                <th>Luas (Hektar)</th>
+                                <th>Peratus</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Perumahan</td>
+                                <td class="d-none d-md-table-cell">3,225.15</td>
+                                <td class="d-none d-md-table-cell">17.1</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Komersil</td>
+                                <td class="d-none d-md-table-cell">842.55</td>
+                                <td class="d-none d-md-table-cell">4.47</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Industri</td>
+                                <td class="d-none d-md-table-cell">1,307.91</td>
+                                <td class="d-none d-md-table-cell">6.93</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Institusi dan Kemudahan Masyarakat</td>
+                                <td class="d-none d-md-table-cell">807.40</td>
+                                <td class="d-none d-md-table-cell">4.28</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Tanah Lapang dan Rekreasi</td>
+                                <td class="d-none d-md-table-cell">769.92</td>
+                                <td class="d-none d-md-table-cell">4.08</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Pengangkutan</td>
+                                <td class="d-none d-md-table-cell">3,771.63</td>
+                                <td class="d-none d-md-table-cell">20.0</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Infrastruktur dan Utiliti</td>
+                                <td class="d-none d-md-table-cell">862.26</td>
+                                <td class="d-none d-md-table-cell">4.57</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Tanah Kosong</td>
+                                <td class="d-none d-md-table-cell">4,800.09</td>
+                                <td class="d-none d-md-table-cell">25.45</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Pertanian</td>
+                                <td class="d-none d-md-table-cell">2,060.33</td>
+                                <td class="d-none d-md-table-cell">10.92</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Hutan</td>
+                                <td class="d-none d-md-table-cell">99.31</td>
+                                <td class="d-none d-md-table-cell">0.53</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Badan Air</td>
+                                <td class="d-none d-md-table-cell">3,225.15</td>
+                                <td class="d-none d-md-table-cell">17.1</td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell"><b>Jumlah</b></td>
+                                <td class="d-none d-md-table-cell"><b>18,861.34</b></td>
+                                <td class="d-none d-md-table-cell"><b>100.00</b></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container" id="mapid" style="height: 62vh; width: 76vh;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+{% endblock %}

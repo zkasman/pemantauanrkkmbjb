@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<main class="content">
+  <div class="container-fluid p-0">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'index' %}">Laman Utama</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cadangan Projek</li>
+      </ol>
+  </nav>
+      <h1 class="h3 mb-3">Senarai Projek</h1>
+
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card card-body">
+                  <table id="datatables-reponsive" class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Kod Projek</th>
+                        <th>Nama Projek</th>
+                        <th>Fokus Projek</th>
+                        <th>Kategori Projek</th>
+                        <th>Jenis Projek</th>
+                        <th>Status Projek</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      {% for object in object_list %}
+                      <tr>
+                        <td><a href="{{object.get_absolute_url}}">{{object.kod_projek}}</a></td>
+                        <td><a href="{{object.get_absolute_url}}">{{object.nama_projek}}</a></td>
+                        <td class="d-none d-md-table-cell">{{object.fokus.nama_fokus}}</td>
+                        <td class="d-none d-md-table-cell">{{object.kategori.nama_kategori}}</td>
+                        <td class="d-none d-md-table-cell">{{object.jenis.nama_jenis}}</td>
+                        <td class="d-none d-md-table-cell">{{object.status.nama_status}}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+              </div>
+      
+          </div>
+      </div>
+  </div>
+</main>
+
+{% endblock %}

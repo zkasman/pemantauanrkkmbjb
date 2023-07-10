@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Laman Utama</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Asas Pembentukan Konsep & Strategi Pembangunan</li>
+        </ol>
+      </nav>
+        <h1 class="h3 mb-3">Zon Tindakan</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container" id="mapid" style="height: 62vh; width: 76vh;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                    </div>
+                    <div class="card-body">
+                        <table id="datatables-reponsive" class="table table-striped table-sm">
+                            <thead>
+                              <tr>
+                                <th>Zon Tindakan</th>
+                                <th>Ciri-Ciri Utama Kawasan</th>
+                                <th>Sub Lembangan</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Zon Merah <br>(Zon Risiko Tinggi)</td>
+                                <td class="d-none d-md-table-cell">
+                                  <p>Kawasan sub lembangan kecil yang menjadi punca utama kepada pencemaran sungai Kelas IV an kawasan risiko inggi banjir</p>
+                                  <hr>
+                                  <p>Melibatkan kawasan seluas 1,092 hektar(5.79%) dengan 9 sub lembangan kecil</p>
+                                </td>
+                                <td class="d-none d-md-table-cell">
+                                  <p>TR : TR4A, TR5A, TR6, TR7A, TR8</p>
+                                  <p>TL : TL4, TL5A, TL6, TL7</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Zon Oren <br>(Zon Risiko Sederhana Tinggi)</td>
+                                <td class="d-none d-md-table-cell">
+                                  <p>Kawasan sub lembangan kecil melibatkan punca pencemaran sungai Kelas IV dan di luar kawasan risiko banjir/ risiko rendah banjir atau</p>
+                                  <hr>
+                                  <p>Kawasan sub lembangan kecil yang menjadi punca utama kepada pencemaran sungai Kelas III dan kawasan risiko tinggi banjir</p>
+                                  <hr>
+                                  <p>Melibatkan kawasan seluas 4,276 hektar (22.67%) dengan 19 sub lembangan kecil</p>
+                                </td>
+                                <td class="d-none d-md-table-cell">
+                                  <p>TR : TR1, TR2, TR2.1, TR3, TR4B, TR5B, TR7B, TR9, TR10</p>
+                                  <p>TL: TL1, TL2, TL3, TL8</p>
+                                  <p>PR : PR1, PR2A</p>
+                                  <p>PL : PL1, PL2, PL3, PL4</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Zon Kuning <br>(Zon Risiko Sederhana)</td>
+                                <td class="d-none d-md-table-cell">
+                                  <p>Kawasan Sub Lembangan Kecil yang menjadi punca kepada pencemaran sungai Kelas III dan kawasan risiko rendah banjir/ di luar kawasan risiko banjir</p>
+                                  <hr>
+                                  <p>Melibatkan kawasan seluas 8,641 hektar(45.81%) dengan 22 sub lembangan kecil</p>
+                                </td>
+                                <td class="d-none d-md-table-cell">
+                                  <p>TR: TR11A, TR11B, TR12, TR13, TR14, TR15A, TR15B, TR16</p>
+                                  <p>TL: TL5B, TL9, TL10, TL11, TL12A, TL13</p>
+                                  <p>PR: PR2B, PR2C, PR3, PR4A, PR4B, PR4C, PR5, PR6</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="d-none d-md-table-cell">Zon Hijau <br>(Zon Risiko Rendah)</td>
+                                <td class="d-none d-md-table-cell">
+                                  <p>Kawasan Sub Lembangan Kecil yang kurang memberi pencemaran sungai Kelas II dan kawasan risiko rendah banjir/ diluar kawasan risiko banjir</p>
+                                  <hr>
+                                  <p>Melibatkan kawasan seluas 4,602 hektar (24.40%) dengan 5 sub lembangan kecil</p>
+                                </td>
+                                <td class="d-none d-md-table-cell">
+                                  <p>TL: TL12B, TL12C, TL15</p>
+                                  <p>PL: PL5, PL6</p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+{% endblock %}

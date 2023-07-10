@@ -1,0 +1,83 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'index' %}">Laman Utama</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'projekrkk_Projek_list' %}">Senarai Projek</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Butiran Projek</li>
+            </ol>
+          </nav>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body">
+                    <table class="table table-striped">
+                        <tr><td><b>Kod Projek:<b></td><td>{{ object.kod_projek }}</td></tr>
+                        <tr><td><b>Nama Projek:<b></td><td>{{ object.nama_projek }}</td></tr>
+                          <tr><td><b>Sub Lembangan:</b></td><td>
+                            {% for sublembangan in projek.sublembangan.all %}
+                            <p>{{ sublembangan.kod_sublembangan }}</p>
+                            {% empty %}
+                            <p>Tiada tetapan sub lembangan</p>
+                            {% endfor %}
+                        </td></tr>
+                        <tr><td><b>Fokus Cadangan:</b></td><td>{{ object.fokus.nama_fokus }}</td></tr>
+                        <tr><td><b>Kategori Projek:</b></td><td>{{ object.kategori.nama_kategori }}</td></tr>
+                        <tr><td><b>Jenis Projek:</b></td><td>{{ object.jenis.nama_jenis }}</td></tr>
+                        <tr><td><b>Fasa Laksana:</b></td><td>
+                          {% for fasa in projek.fasa.all %}
+                          <p>{{ fasa.nama_fasa }}</p>
+                          {% empty %}
+                          <p>Tiada tetapan fasa pelaksanaan</p>
+                          {% endfor %}
+                        </td></tr>
+                        <tr><td><b>Agensi Pemula:</b></td><td>
+                          {% for agensi in projek.agensi_pemula.all %}
+                          <p>{{ agensi.nama_agensi }}</p>
+                          {% empty %}
+                          <p>Tiada tetapan agensi</p>
+                          {% endfor %}
+                        </td></tr>
+                        <tr><td><b>Agensi Pembiaya:</b></td><td>
+                          {% for agensi in projek.agensi_pembiaya.all %}
+                          <p>{{ agensi.nama_agensi }}</p>
+                          {% empty %}
+                          <p>Tiada tetapan agensi</p>
+                          {% endfor %}
+                        </td></tr>
+                        <tr><td><b>Agensi Pelaksana:</b></td><td>
+                          {% for agensi in projek.agensi_pelaksana.all %}
+                          <p>{{ agensi.nama_agensi }}</p>
+                          {% empty %}
+                          <p>Tiada tetapan agensi</p>
+                          {% endfor %}
+                        </td></tr>
+                        <tr><td><b>Kos Projek (RM):</b></td><td>{{ object.kos_pelaksanaan }}</td></tr>
+                        <tr><td><b>Sasaran Pencapaian:</b></td><td><p style="white-space:pre-wrap;">{{ object.sasaran_pencapaian }}</p></td></tr>
+                        <tr><td><b>Deskripsi Cadangan:</b></td><td><p style="white-space:pre-wrap;">{{ object.deskripsi_cadangan }}</p></td></tr>
+                        <tr><td><b>Justifikasi Cadangan:</b></td><td><p style="white-space:pre-wrap;">{{ object.justifikasi_cadangan }}</p></td></tr>
+                        <tr><td><b>Catatan:</b></td><td><p style="white-space:bpre-wrap;">{{ object.catatan }}</p></td></tr>
+                        <tr><td><b>Muka Surat:</b><br>(Dalam Laporan)</td><td>{{ object.mukasurat_laporan }}</td></tr>
+                    </table>
+                </div>
+        
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Lokasi</h5>
+                    <div class="content" id="mapid" style="height: 62vh; width: 76vh;"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+  
+
+{% endblock %}

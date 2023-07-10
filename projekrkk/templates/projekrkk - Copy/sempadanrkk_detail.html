@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'projekrkk_Sempadanrkk_list' %}">
+    Sempadanrkk Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>luas_hektar</td><td>{{ object.luas_hektar }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>nama_rkk</td><td>{{ object.nama_rkk }}</td></tr>
+    <tr><td>polygon_geom</td><td>{{ object.polygon_geom }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

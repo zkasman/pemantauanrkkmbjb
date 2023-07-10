@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+        <h1 class="h3 mb-3">Kawasan Kajian</h1>
+
+        {% include 'status.html' %}
+
+        <div class="row">
+            <!-- <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">Jabatan dan Agensi:</h4>
+                    </div>
+                    <div class="card-body">
+                        <a class="btn btn-primary btn-md btn-block" href="">Tambah Agensi</a>
+                        <hr>
+                        <table class="table table-sm">
+                            <tr>
+                                <th></th>
+                                <th>Agensi</th>
+                                <th>Projek</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+            </div> -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container-fluid" id="mapid" style="height: 43vh;"></div>
+                    </div>
+                </div>
+            </div>
+       
+    </div>
+</main>
+
+
+
+
+{% endblock %}
